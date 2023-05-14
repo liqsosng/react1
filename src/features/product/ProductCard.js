@@ -1,14 +1,17 @@
 import { Card, CardImg, CardImgOverlay, CardTitle } from "reactstrap";
+import { Link } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
-  const { image, name } = product;
+  const { id, image, name } = product;
   return (
-    <Card>
-      <CardImg width="100%" src={image} alt={name} />
-      {/* <CardImgOverlay> */}
-      <CardTitle>{name}</CardTitle>
-      {/* </CardImgOverlay> */}
-    </Card>
+    <Link to={`${id}`}>
+      <Card>
+        <CardImg width="100%" src={image} alt={name} />
+        {/* <CardImgOverlay> */}
+        <CardTitle>{name}</CardTitle>
+        {/* </CardImgOverlay> */}
+      </Card>
+    </Link>
   );
 };
 
