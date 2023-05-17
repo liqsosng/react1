@@ -1,6 +1,6 @@
 import { formatDate } from "../../utils/formatDate";
 
-const Comments = ({ comment }) => {
+const Comment = ({ comment }) => {
   const { content: commentText, author, timestamp } = comment;
   return (
     <p>
@@ -11,4 +11,4 @@ const Comments = ({ comment }) => {
   );
 };
 
-export default Comments;
+export default Comment;

@@ -1,9 +1,9 @@
 import { Col } from "reactstrap";
-import Comment from "./Comments";
-import { selectCommentsBynewsId } from "./commentsSlice";
+import Comment from "./Comment";
+import { selectCommentsByNewsId } from "./commentsSlice";
 
 const CommentsList = ({ newsId }) => {
-  const comments = () => selectCommentsBynewsId(newsId);
+  const comments = selectCommentsByNewsId(newsId);
   if (comments && comments.length > 0) {
     return (
       <Col md="5" className="m-1">
